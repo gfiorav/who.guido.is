@@ -9,7 +9,7 @@ window.onload = function () {
         'Madrid, Spain (I live here!)',
         'Barcelona, Spain',
         'Lagos, Portugal',
-        'Oporto, Portugal'
+        'Oporto, Portugal',
         'Poitiers, France',
         'Paris, France',
         'Frankfurt, Germany',
@@ -18,7 +18,7 @@ window.onload = function () {
         'Milan, Italy',
         'Rome, Italy', 
         'Buenos Aires, Argentina',          
-        'La Pampa, Argentina',
+        'La Pampa, Argentina'
         ];
 
     aux_places = new Array();
