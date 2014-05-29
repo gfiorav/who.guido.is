@@ -101,6 +101,10 @@ body {
 
 }
 
+.close-button:hover {
+    background-image            : url('../src/img/icons/closewhite.png');
+}
+
 /* footer types */
 
 footer {
@@ -348,7 +352,10 @@ footer {
 }
 
 .line, .sub-line {
-    width                       : 100%;
+    width                       : 760px;
+
+    margin                      : 0 auto;
+
     background-color            : white; 
 }
 .line {
@@ -436,7 +443,7 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
-    transition                 : background-size 0.15s;
+    transition                  : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
     -moz-transition             : background-size 0.15s;
     -o-transition               : background-size 0.15s;
