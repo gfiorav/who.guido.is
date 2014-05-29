@@ -5,6 +5,8 @@
 * {
     padding                     : 0px;
     margin                      : 0px;
+
+    -webkit-text-size-adjust    : 100%;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
     min-width                   : 100%;
     min-height                  : 100%;
 
-    filter                     : blur(8px);
+    filter                      : blur(8px);
     -webkit-filter              : blur(8px);
     -moz-filter                 : blur(8px);
     -o-filter                   : blur(8px);
@@ -313,10 +315,11 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
-    transition                 : background-size 0.15s;
+    transition                  : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
     -moz-transition             : background-size 0.15s;
     -o-transition               : background-size 0.15s;
+
     animation                   : zoomin 0.5s;
     -webkit-animation           : zoomin 0.5s;
     -moz-animation              : zoomin 0.5s;
@@ -375,10 +378,11 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
-    transition                 : background-size 0.15s;
+    transition                  : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
     -moz-transition             : background-size 0.15s;
     -o-transition               : background-size 0.15s;
+
     animation                   : zoomin 0.5s;
     -webkit-animation           : zoomin 0.5s;
     -moz-animation              : zoomin 0.5s;
@@ -645,7 +649,40 @@ p {
 }
 
 /* transitions */
+@keyframes slideinfromright {
+    from {
+        left            : 1000px;
+        opacity         : 0;
+    }
+    to {
+        left            : 0px;
+        opacity         : 1;
+    }
+}
+
 @-webkit-keyframes slideinfromright {
+    from {
+        left            : 1000px;
+        opacity         : 0;
+    }
+    to {
+        left            : 0px;
+        opacity         : 1;
+    }
+}
+
+@-moz-keyframes slideinfromright {
+    from {
+        left            : 1000px;
+        opacity         : 0;
+    }
+    to {
+        left            : 0px;
+        opacity         : 1;
+    }
+}
+
+@-o-keyframes slideinfromright {
     from {
         left            : 1000px;
         opacity         : 0;
