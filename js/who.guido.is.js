@@ -7,23 +7,18 @@ window.onload = function () {
     tab_order = ['work', 'apps', 'places', 'share'];
     places  = [
         'Madrid, Spain (I live here!)',
-        'Buenos Aires, Argentina',  
-        'Lagos, Portugal', 
-        'Barcelona, Spain', 
-        'Caceres, Spain', 
-        'Salamanca, Spain', 
-        'Alicante, Spain', 
-        'Valencia, Spain',
-        'Sevilla, Spain',
+        'Barcelona, Spain',
+        'Lagos, Portugal',
+        'Oporto, Portugal'
+        'Poitiers, France',
+        'Paris, France',
+        'Frankfurt, Germany',
+        'Lugano, Switzerland',
+        'Venice, Italy',
         'Milan, Italy',
         'Rome, Italy', 
-        'Venice, Italy',
-        'Frankfurt, Germany',
-        'Paris, France',
-        'Poitiers, France',
-        'Lugano, Switzerland',
+        'Buenos Aires, Argentina',          
         'La Pampa, Argentina',
-        'Oporto, Portugal'
         ];
 
     aux_places = new Array();
@@ -191,12 +186,7 @@ function codeAddress() {
         return;
     }
 
-    if(aux_places.length == places.length)
-        var random = 0;
-    else
-        var random = Math.floor(Math.random()*(aux_places.length + 1));
-
-    var address = aux_places.splice(random, 1)[0];
+    var address = aux_places.splice(0, 1)[0];
 
     geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
