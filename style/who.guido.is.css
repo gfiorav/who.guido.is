@@ -59,8 +59,8 @@ body {
     top                         : 0px;
     left                        : 50%;
     
-    margin-top                  : 60px;
-    margin-bottom               : 250px;
+    margin-top                  : 30px;
+    margin-bottom               : 170px;
     margin-left                 : -400px;
 
 }
@@ -288,7 +288,7 @@ footer {
     position                    : absolute;
 
     width                       : 800px;
-    height                      : 225px;
+    height                      : 150px;
 
     left                        : 50%;
     margin-left                 : -400px;
@@ -349,7 +349,7 @@ footer {
 
 .line, .sub-line {
     width                       : 100%;
-    background-color            : black; 
+    background-color            : white; 
 }
 .line {
     height                      : 2px;
@@ -469,6 +469,10 @@ h1 {
 
 h2 {
     font-size                   : 20px;
+}
+
+h2.button-title {
+    color                       : white;
 }
 
 /* content types */
