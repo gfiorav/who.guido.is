@@ -16,27 +16,19 @@ body {
     overflow                    : hidden;
 }
 
-.background-video-tall, .background-video-wide {
+.background-video {
     position                    : absolute;
 
     z-index                     : -1000;
+
+    min-width                   : 100%;
+    min-height                  : 100%;
 
     -webkit-filter              : blur(8px);
 
     -webkit-animation           : fadein 5s;
 
 }
-
-.background-video-tall {
-    height                      : 100%;
-    width                       : auto;
-}
-
-.background-video-wide {
-    height                      : auto;
-    width                       : 100%;
-}
-
 .background-shade {
     position                    : absolute;
 

@@ -1,8 +1,6 @@
 window.onload = function () {
     background_video            = document.getElementById('background-video');
     background_video.src        = 'src/video/back' + (Math.floor(Math.random() *3) +1) +'.mp4';
-    background_video_width      = 1280;
-    background_video_height     = 720;
 
     map_pid = -1;
 
