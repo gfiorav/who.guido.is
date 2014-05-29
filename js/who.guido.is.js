@@ -6,19 +6,19 @@ window.onload = function () {
 
     tab_order = ['work', 'apps', 'places', 'share'];
     places  = [
-        'Madrid, Spain (I live here!)',
-        'Barcelona, Spain',
-        'Lagos, Portugal',
-        'Oporto, Portugal',
-        'Poitiers, France',
-        'Paris, France',
-        'Frankfurt, Germany',
-        'Lugano, Switzerland',
+        'Buenos Aires, Argentina',
+        'La Pampa, Argentina',
+        'Rome, Italy',
         'Venice, Italy',
         'Milan, Italy',
-        'Rome, Italy', 
-        'Buenos Aires, Argentina',          
-        'La Pampa, Argentina'
+        'Lugano, Switzerland',
+        'Frankfurt, Germany',
+        'Paris, France',
+        'Poitiers, France',
+        'Oporto, Portugal',
+        'Lagos, Portugal',
+        'Barcelona, Spain',
+        'Madrid, Spain (I live here!)'
         ];
 
     aux_places = new Array();
