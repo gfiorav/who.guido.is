@@ -182,7 +182,7 @@ function codeAddress() {
         clearInterval(map_pid);
         aux_places = places.slice();
         places_subtitle.innerHTML = 'One of my goals is to fill the whole map!'
-        map.setZoom(2);
+        map.setZoom(1);
         return;
     }
 
