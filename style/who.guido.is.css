@@ -24,9 +24,15 @@ body {
     min-width                   : 100%;
     min-height                  : 100%;
 
+    filter                     : blur(8px);
     -webkit-filter              : blur(8px);
+    -moz-filter                 : blur(8px);
+    -o-filter                   : blur(8px);
 
+    animation                   : fadein 5s;
     -webkit-animation           : fadein 5s;
+    -moz-animation              : fadein 5s;
+    -o-animation                : fadein 5s;
 
 }
 .background-shade {
@@ -164,27 +170,45 @@ footer {
 }
 
 .content-wrapper-fromleft {
+    animation                   : slideinfromleft 0.75s;
     -webkit-animation           : slideinfromleft 0.75s;
+    -moz-animation              : slideinfromleft 0.75s;
+    -o-animation                : slideinfromleft 0.75s;
 }
 
 .content-wrapper-fromright {
+    animation                   : slideinfromright 0.75s;
     -webkit-animation           : slideinfromright 0.75s;
+    -moz-animation              : slideinfromright 0.75s;
+    -o-animation                : slideinfromright 0.75s;
 }
 
 .content-wrapper-fromup {
+    animation                   : slideinfromup 0.75s;
     -webkit-animation           : slideinfromup 0.75s;
+    -moz-animation              : slideinfromup 0.75s;
+    -o-animation                : slideinfromup 0.75s;
 }
 
 .content-wrapper-toleft {
+    animation                   : slideouttoleft 0.75s ease-out;
     -webkit-animation           : slideouttoleft 0.75s ease-out;
+    -moz-animation              : slideouttoleft 0.75s ease-out;
+    -o-animation                : slideouttoleft 0.75s ease-out;
 }
 
 .content-wrapper-toright {
+    animation                   : slideouttoright 0.75s ease-out;
     -webkit-animation           : slideouttoright 0.75s ease-out;
+    -moz-animation              : slideouttoright 0.75s ease-out;
+    -o-animation                : slideouttoright 0.75s ease-out;
 }
 
 .content-wrapper-todown {
+    animation                   : slideouttodown 0.75s ease-out;
     -webkit-animation           : slideouttodown 0.75s ease-out;
+    -moz-animation              : slideouttodown 0.75s ease-out;
+    -o-animation                : slideouttodown 0.75s ease-out;
 }
 
 .content-title {
@@ -289,8 +313,14 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
+    transition                 : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
+    -moz-transition             : background-size 0.15s;
+    -o-transition               : background-size 0.15s;
+    animation                   : zoomin 0.5s;
     -webkit-animation           : zoomin 0.5s;
+    -moz-animation              : zoomin 0.5s;
+    -o-animation                : zoomin 0.5s;
 
 }
 
@@ -345,8 +375,14 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
+    transition                 : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
+    -moz-transition             : background-size 0.15s;
+    -o-transition               : background-size 0.15s;
+    animation                   : zoomin 0.5s;
     -webkit-animation           : zoomin 0.5s;
+    -moz-animation              : zoomin 0.5s;
+    -o-animation                : zoomin 0.5s;
 }
 
 .social-icon:hover {
@@ -396,7 +432,10 @@ footer {
     background-position         : center;
     background-repeat           : no-repeat;
 
+    transition                 : background-size 0.15s;
     -webkit-transition          : background-size 0.15s;
+    -moz-transition             : background-size 0.15s;
+    -o-transition               : background-size 0.15s;
 
 }
 
