@@ -1,0 +1,239 @@
+<html>
+<head>
+    <title>Guido Fioravantti</title>
+
+    <link rel="stylesheet" type="text/css" href="style/who.guido.is.css">
+    <script type="text/javascript" src="js/who.guido.is.js"></script>
+
+    <!-- maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+<body>
+    <video id='background-video' class='background-video-tall' autoplay muted loop>
+        <source type='video/mp4'></source>
+    </video>
+
+    <section class='background-shade'></section>
+
+    <footer>
+        <p class='footer-text'>Last Updated: May 2014 &middot; Madrid, Spain</p>
+    </footer>
+
+    <section class='wrapper'>
+        <!-- WORK -->
+        <section id='work-section' class='content-wrapper-initial'>
+            <section class='reading-shade'></section>
+            <span name='close-button' class='close-button'></span>
+            <section class='content-title'>
+                <section class='current-page-icon-wrapper'>
+                    <span id='work-icon' class='current-page-icon'></span>
+                </section>
+                <section id='writable-title' class='title-line-wrapper'>
+                    <h3>Work</h3>
+                    <!-- <section class='sub-line'></section> -->
+                </section>
+            </section>
+            
+            <section class='content-text'>
+                <h4>Profile</h4>
+                <p>
+                    22 years old. Highly motivated and focused. I like to work in small teams with big projects. Creativity and persistence characterize me the most.
+                </p>
+
+                <h4>Experience</h4>
+                <p>
+                    Reaserch Intern at IMDEA Networks (Madrid, Spain) [Dec. 2013 - present]
+                </p>
+
+                <h4>Education</h4>
+                <p>
+                    Bachelor in Telecommunications Engineering - Universidad Carlos III of Madrid [2009 - present]
+                </p>
+
+                <h4>Abilities</h4>
+                <p>
+                    Programming C (medium - advanced), Java (advanced), Ruby (initiation), C# (initiation) and Python (initiation)
+                </p>
+                <p>
+                    Web design/programming (HTML5, CSS3, Javascript and RAILS Framework)
+                </p>
+                <p>
+                    Hacking (enthusiast)
+                </p>
+                <p>
+                    Microprocessor and integrated circuits design
+                </p>
+                <p>
+                    PC hardware (diagnostic and repair)
+                </p>
+                <p>
+                    Linux (expert)
+                </p>
+                <p>
+                    Android (expert)
+                </p>
+                <p>
+                    Windows, MacOS and iOS (expert)
+                </p>
+
+                <h4>Languages</h4>
+                <p>
+                    Native Spanish
+                </p>
+                <p>
+                    Native English ('First Certificate' with 'A' grade)
+                </p>
+                <p>
+                    Some French.
+                </p>
+
+                <h4>References</h4>
+                <p>
+                    Web design:
+                </p>
+
+                <p><a class='portfolio-link' href='http://www.OnlineSampler.com'>www.OnlineSampler.com</a></p>
+                <p><a class='portfolio-link' href='http://www.tassar.es'>www.tassar.es</a></p>
+
+                <h4>Other info</h4>
+                <p>I have a drivers license</p>
+                <p>I'm totally OK with traveling (I enjoy it)</p>
+
+            </section>
+
+        </section>
+
+        <!-- APPS -->
+        <section id='apps-section' class='content-wrapper-initial'>
+            <section class='reading-shade'></section>
+            <span name='close-button' class='close-button'></span>
+            <section class='content-title'>
+                <section class='current-page-icon-wrapper'>
+                    <span id='apps-icon' class='current-page-icon'></span>
+                </section>
+                <section id='writable-title' class='title-line-wrapper'>
+                    <h3>Apps</h3>
+                </section>
+            </section>
+            
+            <section class='content-text'>
+                <section class='app-container'>
+                    <h4>OnlineSampler</h4>
+                    <section class='app-info'>
+                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
+                    <p>Check it out: <a href="http://www.OnlineSampler.com">www.OnlineSampler.com</a> </p>
+                    </section>
+                    <section id='onlinesampler-ss' class='app-ss'></section>
+                </section>
+
+                <section class='app-container'>
+                    <h4>Beat Genius</h4>
+                    <section class='app-info'>
+                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
+                    <p>Check it out: <a href="apps/beatgenius/index.html">link</a> </p>
+                    </section>
+                    <section id='beatgenius-ss' class='app-ss'></section>
+                </section>
+
+                <section class='app-container'>
+                    <h4>Box Frenzy</h4>
+                    <section class='app-info'>
+                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
+                    <p>Check it out: <a href="apps/boxfrenzy/index.html">link</a></p>
+                    </section>
+                    <section id='boxfrenzy-ss' class='app-ss'></section>
+                </section>
+            </section>
+
+        </section>
+
+        <!-- PLACES -->
+        <section id='places-section' class='content-wrapper-initial'>
+            <section class='reading-shade'></section>
+            <span name='close-button' class='close-button'></span>
+            <section class='content-title'>
+                <section class='current-page-icon-wrapper'>
+                    <span id='places-icon' class='current-page-icon'></span>
+                </section>
+                <section id='writable-title' class='title-line-wrapper'>
+                    <h3>Places</h3>
+                    <!-- <section class='sub-line'></section> -->
+                </section>
+            </section>
+            
+            <section class='content-text'>
+                <h4 id='places-subtitle'>Here are some places I've been to:</h4>
+                <div id="map-canvas"></div>
+            </section>
+
+        </section>
+
+        <!-- SHARE -->
+        <section id='share-section' class='content-wrapper-initial'>
+            <section class='reading-shade'></section>
+            <span name='close-button' class='close-button'></span>
+            <section class='content-title'>
+                <section class='current-page-icon-wrapper'>
+                    <span id='share-icon' class='current-page-icon'></span>
+                </section>
+                <section id='writable-title' class='title-line-wrapper'>
+                    <h3>Share</h3>
+                </section>
+            </section>
+            
+            <section class='content-text'>
+                <h4>You can find me here:</h4>
+                <section class='4x4-matrix'>
+                    <section class='share-buttons'>
+                        <section id='twitter' class='social-icon'></section>
+                        <h2>Follow me</h2>
+                    </section>
+                    <section class='share-buttons'>
+                        <section id='linkedin' class='social-icon'></section>
+                        <h2>Let's connect</h2>
+                    </section>
+                    <section class='share-buttons'>
+                        <section id='github' class='social-icon'></section>
+                        <h2>Fork me</h2>
+                    </section>
+                    <section class='share-buttons'>
+                        <section id='facebook' class='social-icon'></section>
+                        <h2>Facebook</h2>
+                    </section>
+                </section>
+            </section>
+
+        </section>
+
+        
+
+    </section>
+
+    <section class='nav-wrapper'>
+        <section class='welcome-title'>
+            <h1>Who is Guido Fioravantti?</h1>
+        </section>
+        <section class='line'></section>
+
+        <section class='nav-buttons'>
+            <section class='button-wrapper'>
+                <section id='work-button' class='button-image'></section>
+                <h2>Work</h2>
+            </section>
+            <section class='button-wrapper'>
+                <section id='apps-button' class='button-image'></section>
+                <h2>Apps</h2>
+            </section>
+            <section class='button-wrapper'>
+                <section id='places-button' class='button-image'></section>
+                <h2>Places</h2>
+            </section>
+            <section class='button-wrapper'>
+                <section id='share-button' class='button-image'></section>
+                <h2>Share</h2>
+            </section>
+        </section>
+    </section>
+
+</body>
+</html>

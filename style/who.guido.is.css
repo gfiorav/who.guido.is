@@ -1,0 +1,593 @@
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+
+/* style */
+* {
+    padding                     : 0px;
+    margin                      : 0px;
+}
+
+body {
+    height                      : 100%;
+    width                       : 100%;
+
+    background-color            : #FFFFFF;
+
+    overflow                    : hidden;
+}
+
+.background-video-tall, .background-video-wide {
+    position                    : absolute;
+
+    z-index                     : -1000;
+
+    -webkit-filter              : blur(8px);
+
+    -webkit-animation           : fadein 5s;
+
+}
+
+.background-video-tall {
+    height                      : 100%;
+    width                       : auto;
+}
+
+.background-video-wide {
+    height                      : auto;
+    width                       : 100%;
+}
+
+.background-shade {
+    position                    : absolute;
+
+    width                       : 100%;
+    height                      : 100%;
+
+    background-color            : white;
+
+    opacity                     : 0.3;
+
+    z-index                     : -900;
+}
+
+.wrapper {
+    display                     : block;
+    position                    : absolute;
+    height                      : auto;
+
+    bottom                      : 0px;
+    top                         : 0px;
+    left                        : 50%;
+    
+    margin-top                  : 60px;
+    margin-bottom               : 250px;
+    margin-left                 : -400px;
+
+}
+
+.reading-shade {
+    position                    : absolute;
+
+    z-index                     : -800;
+
+    border-radius               : 10px;
+
+    width                       : 100%;
+    height                      : 100%;
+
+    background-color            : white;
+
+    opacity                     : 0.7;
+
+}
+
+.close-button {
+    display                     : block;
+    position                    : absolute;
+
+    right                       : 15px;
+    top                         : 15px;
+
+    z-index                     : 100;
+
+    background-image            : url('../src/img/icons/close.png');
+
+    width                       : 30px;
+    height                      : 30px;
+
+    background-size             : 30px auto;
+    background-position         : center;
+    background-repeat           : no-repeat;
+
+}
+
+/* footer types */
+
+footer {
+    position                    : absolute;
+
+    width                       : 800px;
+    height                      : 60px;
+
+    left                        : 50%;
+    margin-left                 : -400px;
+
+    top                         : 5px;
+
+    float                       : left;
+}
+
+.footer-text {
+    color                       : black;
+
+    font-size                   : 12px;
+
+    text-align                  : center;
+
+    margin                      : 0px;
+
+}
+
+.footer-link {
+    text-decoration             : none;
+
+    color                       : black;
+}
+
+/* content elements */
+
+.content-wrapper-fromleft, .content-wrapper-fromright, .content-wrapper-toleft, .content-wrapper-toright, .content-wrapper-fromup, .content-wrapper-todown {
+    position                    : absolute;
+
+    float                       : left;
+
+    width                       : 800px;
+
+    height                      : 100%;
+}
+
+.content-wrapper-initial {
+    right                       : 1000px;
+
+    display                     : none;
+
+}
+
+.content-wrapper-fromleft. .content-wrapper-fromright, .content-wrapper-fromup {
+    left                        : 0;
+
+    opacity                     : 1;
+}
+
+.content-wrapper-toleft, .content-wrapper-toright {
+    left                        : 1000px;
+
+    opacity                     : 0;
+}
+
+.content-wrapper-todown {
+    top                         : -1000px;
+
+    opacity                     : 0;
+}
+
+.content-wrapper-fromleft {
+    -webkit-animation           : slideinfromleft 0.75s;
+}
+
+.content-wrapper-fromright {
+    -webkit-animation           : slideinfromright 0.75s;
+}
+
+.content-wrapper-fromup {
+    -webkit-animation           : slideinfromup 0.75s;
+}
+
+.content-wrapper-toleft {
+    -webkit-animation           : slideouttoleft 0.75s ease-out;
+}
+
+.content-wrapper-toright {
+    -webkit-animation           : slideouttoright 0.75s ease-out;
+}
+
+.content-wrapper-todown {
+    -webkit-animation           : slideouttodown 0.75s ease-out;
+}
+
+.content-title {
+    width                       : 100%;
+    height                      : 60px;
+
+    margin                      : 20px;
+
+}
+
+.current-page-icon-wrapper {
+    display                     : block;
+
+    float                       : left;
+}
+
+.title-line-wrapper {
+    display                     : block;   
+
+    float                       : left;
+}
+
+.sub-line {
+    height                      : 1px;
+}
+
+.current-page-icon {
+    display                     : block;
+
+    width                       : 60px;
+    height                      : 60px;
+
+    background-size             : 60px auto;
+    background-position         : center;
+    background-repeat           : no-repeat;
+}
+
+#work-icon {
+    background-image            : url('../src/img/icons/work.png');
+}
+
+#apps-icon {
+    background-image            : url('../src/img/icons/apps.png');
+}
+
+#places-icon {
+    background-image            : url('../src/img/icons/places.png');
+}
+
+#share-icon {
+    background-image            : url('../src/img/icons/share.png');
+}
+
+.content-text {
+    display                     : block;
+    position                    : absolute;
+
+    height                      : auto;
+    overflow                    : auto;
+
+    bottom                      : 0px;
+    top                         : 0px;
+    left                        : 0px;
+    right                       : 0px;
+    margin-top                  : 100px;
+    margin-bottom               : 20px;
+    margin-right                : 90px;
+    margin-left                 : 90px;
+
+}
+
+/* navigation elements */
+
+.nav-wrapper {
+    position                    : absolute;
+
+    width                       : 800px;
+    height                      : 225px;
+
+    left                        : 50%;
+    margin-left                 : -400px;
+
+    bottom                      : 10px;
+
+}
+
+.nav-buttons {
+    width                       : 100%;
+}
+
+.button-wrapper {
+    float                       : left;
+
+    width                       : 25%;
+}
+
+.button-image {
+    width                       : 100%;
+    height                      : 125px;
+
+    background-size             : 100px auto;
+    background-position         : center;
+    background-repeat           : no-repeat;
+
+    -webkit-transition          : background-size 0.15s;
+    -webkit-animation           : zoomin 0.5s;
+
+}
+
+.button-image:hover {
+    background-size             : 110px auto;
+}
+
+#work-button {
+    background-image            : url('../src/img/icons/work.png');
+}
+
+#apps-button {
+    background-image            : url('../src/img/icons/apps.png');
+}
+
+#places-button {
+    background-image            : url('../src/img/icons/places.png');
+}
+
+#share-button {
+    background-image            : url('../src/img/icons/share.png');
+}
+
+.line, .sub-line {
+    width                       : 100%;
+    background-color            : black; 
+}
+.line {
+    height                      : 2px;
+}
+
+/* share section */
+.4x4-matrix {
+    width                       : 100%;
+    height                      : 100%;
+}
+
+.share-buttons {
+    display                     : block;
+
+    width                       : 50%;
+    height                      : 200px;
+
+    float                       : left;
+}
+
+.social-icon {
+    width                       : 100%;
+    height                      : 150px;
+
+    background-size             : 120px auto;
+    background-position         : center;
+    background-repeat           : no-repeat;
+
+    -webkit-transition          : background-size 0.15s;
+    -webkit-animation           : zoomin 0.5s;
+}
+
+.social-icon:hover {
+    background-size             : 130px auto;
+}
+
+#twitter {
+    background-image            : url('../src/img/icons/twitter.png');
+}
+
+#linkedin {
+    background-image            : url('../src/img/icons/linkedin.png');
+}
+
+#facebook {
+    background-image            : url('../src/img/icons/facebook.png');
+}
+
+#github {
+    background-image            : url('../src/img/icons/github.png');
+}
+
+/* apps section */
+.app-container {
+    width                       : 100%;
+    height                      : 150px;
+
+    margin-bottom               : 20px;
+}
+
+.app-info {
+    float                       : left;
+
+    width                       : 75%;
+}
+
+.app-ss {
+    float                       : right;
+
+    width                       : 100px;
+    height                      : 100px;
+
+    margin-right                : 30px;
+
+
+    background-size             : 100px auto;
+    background-position         : center;
+    background-repeat           : no-repeat;
+
+    -webkit-transition          : background-size 0.15s;
+
+}
+
+#onlinesampler-ss {
+    background-image            : url('../src/img/apps/onlinesamplerSS.png');
+}
+
+#beatgenius-ss {
+    background-image            : url('../src/img/apps/beatgeniusSS.png');
+}
+
+#boxfrenzy-ss {
+    background-image            : url('../src/img/apps/boxfrenzySS.png');
+}
+
+h1, h2, h3, h4, p, .portfolio-links {
+    color                       : black;
+    text-align                  : center;
+
+    font-family                 : 'Raleway', sans-serif;
+}
+
+h1 {
+
+    font-size                   : 55px;
+}
+
+h2 {
+    font-size                   : 20px;
+}
+
+/* content types */
+
+h3, h4, p {
+    margin-bottom               : 10px;
+    margin-right                : 20px;
+}
+
+h3 {
+    text-align                  : center;
+
+    margin-left                 : 10px;
+    margin-top                  : 5px;
+
+    font-size                   : 50px;
+
+    line-height                 : 100%;
+}
+
+h4 {
+    text-align                  : left;
+    margin-left                 : 10px;
+
+    font-size                   : 30px;
+}
+
+p {
+    margin-left                 : 40px;
+    text-align                  : justify;
+}
+
+.portfolio-link {
+    text-decoration             : none;
+
+    color                       : black;
+}
+
+/* animation */
+@-webkit-keyframes fadein {
+    from {
+        opacity     : 0;
+    }
+    to {
+        opacity     : 1;
+    }
+}
+
+@-webkit-keyframes zoomin
+{
+    from {
+        background-size : 0px auto;
+    }
+    to {
+        background-size : 120px auto;
+    }
+}
+
+@-webkit-keyframes shade-variation
+{
+    0% {
+        background-color : #FFFFFF;
+    }
+    25% {
+        background-color : #FFFFE0;
+    }
+    50% {
+        background-color : #F5CCF5;
+    }
+    75% {
+        background-color : #D6F5FF;
+    }
+}
+
+/* transitions */
+@-webkit-keyframes slideinfromright {
+    from {
+        left            : 1000px;
+        opacity         : 0;
+    }
+    to {
+        left            : 0px;
+        opacity         : 1;
+    }
+}
+
+@-webkit-keyframes slideinfromleft {
+    from {
+        left            : -1000px;
+        opacity         : 0;
+    }
+    to {
+        left            : 0px;
+        opacity         : 1;
+    }
+}
+
+@-webkit-keyframes slideinfromup {
+    from {
+        top             : 1000px;
+        opacity         : 0;
+    }
+    to {
+        top             : 0px;
+        opacity         : 1;
+    }
+}
+
+@-webkit-keyframes slideouttodown {
+    from {
+        top             : 0px;
+        opacity         : 1;
+    }
+    to {
+        top             : 1000px;
+        opacity         : 0;
+    }
+}
+
+@-webkit-keyframes slideouttoleft {
+    from {
+        left             : 0px;
+        opacity          : 1;
+    }
+    to {
+        left             : -1000px;
+        opacity          : 0;
+    }
+}
+
+@-webkit-keyframes slideouttoright {
+    from {
+        left             : 0px;
+        opacity          : 1;
+    }
+    to {
+        left             : 1000px;
+        opacity          : 0;
+    }
+}
+
+@-webkit-keyframes openreadingshade {
+    from {
+        width           : 0%;
+    }
+    to {
+        width           : 100%;
+    }
+}
+
+/* map */
+#map-canvas {
+    height              : 500px;
+    width               : 100%;
+
+    border-radius       : 10px;
+}
