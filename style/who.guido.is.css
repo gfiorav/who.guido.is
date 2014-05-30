@@ -50,6 +50,12 @@ body {
     z-index                     : -900;
 }
 
+.hola {
+    width                       : 800px;
+
+    margin                      : 0 auto;
+}
+
 .wrapper {
     display                     : block;
     position                    : absolute;
@@ -136,6 +142,21 @@ footer {
     text-decoration             : none;
 
     color                       : black;
+}
+
+.welcome-title {
+    position                    : fixed;
+
+    width                       : 760px;
+
+    bottom                      : 180px;
+
+    left                        : 50%;
+    margin-left                 : -380px;
+}
+
+.welcome-banner {
+    width                       : 760px;
 }
 
 /* content elements */
@@ -470,8 +491,9 @@ h1, h2, h3, h4, p, .portfolio-links {
 }
 
 h1 {
+    color                       : white;
 
-    font-size                   : 55px;
+    font-size                   : 150px;
 }
 
 h2 {

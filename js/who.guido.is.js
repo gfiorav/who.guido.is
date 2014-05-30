@@ -4,6 +4,8 @@ window.onload = function () {
 
     map_pid = -1;
 
+    disposables = document.getElementsByName('disposables');
+
     tab_order = ['work', 'apps', 'places', 'share'];
     places  = [
         'Buenos Aires, Argentina',
