@@ -17,7 +17,7 @@ window.onload = function () {
         'Frankfurt, Germany',
         'Paris, France',
         'Poitiers, France',
-        'Oporto, Portugal',
+        'Porto, Portugal',
         'Lagos, Portugal',
         'Barcelona, Spain',
         'Madrid, Spain (I live here!)'
