@@ -50,12 +50,6 @@ body {
     z-index                     : -900;
 }
 
-.hola {
-    width                       : 800px;
-
-    margin                      : 0 auto;
-}
-
 .wrapper {
     display                     : block;
     position                    : absolute;
@@ -144,19 +138,44 @@ footer {
     color                       : black;
 }
 
-.welcome-title {
-    position                    : fixed;
+.filler {
+    position                    : absolute;
+
+    background-color            : #FFFFFF;
+
+    top                         : 0px;
+    bottom                      : 0px;
+    left                        : 0px;
+    right                       : 0px;
+
+    margin-bottom               : 430px;
 
     width                       : 760px;
+}
 
-    bottom                      : 180px;
+.welcome-title {
+    position                    : absolute;
+
+    bottom                      : 0px;
+    top                         : 0px;
+    
+    width                       : 760px;
 
     left                        : 50%;
     margin-left                 : -380px;
+
+    margin-bottom               : 180px;
+    margin-top                  : 30px;
+
 }
 
 .welcome-banner {
+    position                    : absolute;
+
     width                       : 760px;
+
+    bottom                      : 0px;
+
 }
 
 /* content elements */
