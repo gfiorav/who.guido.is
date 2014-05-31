@@ -178,7 +178,7 @@ footer {
 .welcome-title:hover {
     margin-top                  : 25px;
 
-    -webkit-animation           : peek 0.5s linear;
+    -webkit-animation           : peek 0.3s linear;
 }
 
 .welcome-banner {
@@ -569,40 +569,34 @@ p {
 /* animation */
 @keyframes peek {
     0%      { margin-top : 0px;  }
-    20%     { margin-top : 40px; }
-    40%     { margin-top : 20px; }
-    60%     { margin-top : 35px; }
-    80%     { margin-top : 25px; }
-    100%    { margin-top : 30px; }
-    
-
+    25%     { margin-top : 30px; }
+    50%     { margin-top : 23px; }
+    75%     { margin-top : 27px; }
+    100%    { margin-top : 25px; }
 }
 
 @-webkit-keyframes peek {
     0%      { margin-top : 0px;  }
-    20%     { margin-top : 40px; }
-    40%     { margin-top : 20px; }
-    60%     { margin-top : 35px; }
-    80%     { margin-top : 25px; }
-    100%    { margin-top : 30px; }
+    25%     { margin-top : 30px; }
+    50%     { margin-top : 23px; }
+    75%     { margin-top : 27px; }
+    100%    { margin-top : 25px; }
 }
 
 @-moz-keyframes peek {
-    from {
-        margin-top  : 0px;
-    }
-    to {
-        margin-top  : 30px;
-    }
+    0%      { margin-top : 0px;  }
+    25%     { margin-top : 30px; }
+    50%     { margin-top : 23px; }
+    75%     { margin-top : 27px; }
+    100%    { margin-top : 25px; }
 }
 
 @-o-keyframes peek {
-    from {
-        margin-top  : 0px;
-    }
-    to {
-        margin-top  : 30px;
-    }
+    0%      { margin-top : 0px;  }
+    25%     { margin-top : 30px; }
+    50%     { margin-top : 23px; }
+    75%     { margin-top : 27px; }
+    100%    { margin-top : 25px; }
 }
 
 
