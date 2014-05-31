@@ -96,7 +96,6 @@ function loadSection (section) {
         case 'home':
         current_section = section;
         break;
-        break;
 
         case 'work':
         var index       = 1; 
@@ -136,11 +135,13 @@ function loadSection (section) {
     }
 
     if(previous_section == 'home') {
-        document.getElementById(section + '-section').className = 'content-wrapper-fromup';
+        document.getElementById(previous_section +'-section').className = 'welcome-title-close';
+        document.getElementById(section + '-section').className = 'content-wrapper-fromdown';
     } 
     else if (section == 'home') {
         document.getElementById(previous_section + '-section').className = 'content-wrapper-todown';
-    }
+        document.getElementById(section +'-section').className = 'welcome-title';
+    }   
     else {
 
         var in_animation, out_animation;

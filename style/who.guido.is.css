@@ -31,10 +31,10 @@ body {
     -moz-filter                 : blur(8px);
     -o-filter                   : blur(8px);
 
-    animation                   : fadein 5s;
-    -webkit-animation           : fadein 5s;
-    -moz-animation              : fadein 5s;
-    -o-animation                : fadein 5s;
+    animation                   : fadein 2s;
+    -webkit-animation           : fadein 2s;
+    -moz-animation              : fadein 2s;
+    -o-animation                : fadein 2s;
 
 }
 .background-shade {
@@ -153,7 +153,7 @@ footer {
     width                       : 760px;
 }
 
-.welcome-title {
+.welcome-title, .welcome-title-close {
     position                    : absolute;
 
     bottom                      : 0px;
@@ -166,7 +166,19 @@ footer {
 
     margin-bottom               : 170px;
     margin-top                  : 0px;
+}
 
+.welcome-title-close {
+    bottom                      : 10000px;
+
+    display                     : none;
+}
+
+
+.welcome-title:hover {
+    margin-top                  : 25px;
+
+    -webkit-animation           : peek 0.5s linear;
 }
 
 .welcome-banner {
@@ -358,11 +370,6 @@ footer {
     background-size             : 100px auto;
     background-position         : center;
     background-repeat           : no-repeat;
-
-    /*transition                  : background-size 0.15s;
-    -webkit-transition          : background-size 0.15s;
-    -moz-transition             : background-size 0.15s;
-    -o-transition               : background-size 0.15s;*/
 
     animation                   : zoomin 0.5s;
     -webkit-animation           : zoomin 0.5s;
@@ -560,6 +567,45 @@ p {
 }
 
 /* animation */
+@keyframes peek {
+    0%      { margin-top : 0px;  }
+    20%     { margin-top : 40px; }
+    40%     { margin-top : 20px; }
+    60%     { margin-top : 35px; }
+    80%     { margin-top : 25px; }
+    100%    { margin-top : 30px; }
+    
+
+}
+
+@-webkit-keyframes peek {
+    0%      { margin-top : 0px;  }
+    20%     { margin-top : 40px; }
+    40%     { margin-top : 20px; }
+    60%     { margin-top : 35px; }
+    80%     { margin-top : 25px; }
+    100%    { margin-top : 30px; }
+}
+
+@-moz-keyframes peek {
+    from {
+        margin-top  : 0px;
+    }
+    to {
+        margin-top  : 30px;
+    }
+}
+
+@-o-keyframes peek {
+    from {
+        margin-top  : 0px;
+    }
+    to {
+        margin-top  : 30px;
+    }
+}
+
+
 @keyframes fadein {
     from {
         opacity     : 0;
