@@ -1,245 +1,98 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Guido Fioravantti</title>
+	<title>This is who Guido is</title>
+	<meta name="viewport" content="width=800px">
 
-    <link rel="stylesheet" type="text/css" href="style/who.guido.is.css">
-    <script type="text/javascript" src="js/who.guido.is.js"></script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		ga('create', 'UA-38467705-5', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- Search Engine -->
+	<meta name="description" content="Guido Fioravantti's personal webpage made to emualte a terminal using HTML5, CSS3 and Javascript and no images. Fast and mobile friendly.">
+	<meta name="robots" content="index,follow">
+	<meta name="keywords" content="guido, fioravantti, guido fioravantti, html5, css3, javascript, web, design, web design, terminal emulator, hiring" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src='js/terminal.js'></script>
 </head>
 <body>
-    <video id='background-video' class='background-video' autoplay muted loop>
-        <!-- <source type='video/ogg' src='src/video/ogg/back1.ogv'></source> -->
-        <source type='video/mp4'></source>
-    </video>
+	<div class='wrapper'>	
 
-    <section class='background-shade'></section>
+		<!-- Terminal -->
+		<div class='terminal-wrapper'>
+			<div class='terminal-header'>
+				<div class='terminal-header-buttons'>
+					<div class='thb-close'></div>
+					<div class='thb-minimise'></div>
+					<div class='thb-expand'></div>
+				</div>
 
-    <footer>
-        <p class='footer-text'>Last Updated: May 2014 &middot; Madrid, Spain</p>
-    </footer>
+				<div class='terminal-header-label'>
+					<div class='thl-text'>
+						guest &mdash; bash &mdash; 70x24
+					</div>
+					
+				</div>
+			</div>
+			<div class='terminal'>
+				<ol id='txtTermText' class='terminal-text'></ol>
+			</div>
+		</div>
+		
+		<!-- Panel -->
+		<div class='panel-background'>
+			<div class='panel-wrapper'>
+				<div class='panel-title'>
+					COMMANDS
+				</div>
 
-    <section id='home-section' name='disposable' class='welcome-title'>
-        <section class='filler'></section>
-        <img class='welcome-banner' src="src/img/banners/welcome.png">
-    </section>
+				<div class='panel-buttons-wrapper'>
+					<button id='btnCurrentPosition' class='panel-button'>
+						Current Position
+					</button>
+					<button id='btnLanguagesSpoken' class='panel-button'>
+						Languages Spoken
+					</button>
+					<button id='btnAbilities' class='panel-button'>
+						Abilities
+					</button>
+					<button id='btnEducation' class='panel-button'>
+						Education
+					</button>
+					<button id='btnContact' class='panel-button'>
+						Contact
+					</button>
+					<!-- <button id='btnPDFVersion' class='panel-button'>
+						PDF Version
+					</button> -->
+					<button id='btnPortfolio' class='panel-button'>
+						Portfolio
+					</button>
+					<button id='btnClear' class='panel-button'>
+						Clear
+					</button>
 
-    <section class='wrapper'>
-        <!-- WORK -->
-        <section id='work-section' class='content-wrapper-initial'>
-            <section class='reading-shade'></section>
-            <span name='close-button' class='close-button'></span>
-            <section class='content-title'>
-                <section class='current-page-icon-wrapper'>
-                    <span id='work-icon' class='current-page-icon'></span>
-                </section>
-                <section id='writable-title' class='title-line-wrapper'>
-                    <h3>Work</h3>
-                    <!-- <section class='sub-line'></section> -->
-                </section>
-            </section>
-            
-            <section class='content-text'>
-                <h4>Profile</h4>
-                <p>
-                    22 years old. Highly motivated and focused. I like to work in small teams with big projects. Creativity and persistence characterize me the most.
-                </p>
+				</div>
+			</div>
+			<footer>
+				<h3>Designed by Guido Fioravantti</h3>
+				<h3>
+					Everything contained in this webpage is original work by Guido Fioravantti. The terminal design is obviously inspired by the Macintosh's Yosemite 10.10 (OS X) operating system's terminal emulator, Terminal. The fonts used are Helvetica Neue and Courier New. No real reason to keep typing stuff here but, hey, it looks good if you have a big footer, Apple-style. Cheers.
+				</h3>
+				<h3>Jan 2015 &mdash; Madrid, Spain</h3>
+			</footer>
+		</div>
+	</div>
 
-                <h4>Experience</h4>
-                <p>
-                    Reaserch Intern at IMDEA Networks (Madrid, Spain) [Dec. 2013 - present]
-                </p>
-
-                <h4>Education</h4>
-                <p>
-                    Bachelor in Telecommunications Engineering - Universidad Carlos III of Madrid [2009 - present]
-                </p>
-
-                <h4>Abilities</h4>
-                <p>
-                    Programming C (medium - advanced), Java (advanced), Ruby (initiation), C# (initiation) and Python (initiation)
-                </p>
-                <p>
-                    Web design/programming (HTML5, CSS3, Javascript and RAILS Framework)
-                </p>
-                <p>
-                    Hacking (enthusiast)
-                </p>
-                <p>
-                    Microprocessor and integrated circuits design
-                </p>
-                <p>
-                    PC hardware (diagnostic and repair)
-                </p>
-                <p>
-                    Linux (expert)
-                </p>
-                <p>
-                    Android (expert)
-                </p>
-                <p>
-                    Windows, MacOS and iOS (expert)
-                </p>
-
-                <h4>Languages</h4>
-                <p>
-                    Native Spanish
-                </p>
-                <p>
-                    Native English ('First Certificate' with 'A' grade)
-                </p>
-                <p>
-                    Some French.
-                </p>
-
-                <h4>References</h4>
-                <p>
-                    Web design:
-                </p>
-
-                <p><a class='portfolio-link' href='http://www.OnlineSampler.com'>www.OnlineSampler.com</a></p>
-                <p><a class='portfolio-link' href='http://www.tassar.es'>www.tassar.es</a></p>
-
-                <h4>Other info</h4>
-                <p>I have a drivers license</p>
-                <p>I'm totally OK with traveling (I enjoy it)</p>
-
-            </section>
-
-        </section>
-
-        <!-- APPS -->
-        <section id='apps-section' class='content-wrapper-initial'>
-            <section class='reading-shade'></section>
-            <span name='close-button' class='close-button'></span>
-            <section class='content-title'>
-                <section class='current-page-icon-wrapper'>
-                    <span id='apps-icon' class='current-page-icon'></span>
-                </section>
-                <section id='writable-title' class='title-line-wrapper'>
-                    <h3>Apps</h3>
-                </section>
-            </section>
-            
-            <section class='content-text'>
-                <section class='app-container'>
-                    <h4>OnlineSampler</h4>
-                    <section class='app-info'>
-                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
-                    <p>Check it out: <a href="http://www.OnlineSampler.com">www.OnlineSampler.com</a> </p>
-                    </section>
-                    <section id='onlinesampler-ss' class='app-ss'></section>
-                </section>
-
-                <section class='app-container'>
-                    <h4>Beat Genius</h4>
-                    <section class='app-info'>
-                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
-                    <p>Check it out: <a href="apps/beatgenius/index.html">link</a> </p>
-                    </section>
-                    <section id='beatgenius-ss' class='app-ss'></section>
-                </section>
-
-                <section class='app-container'>
-                    <h4>Box Frenzy</h4>
-                    <section class='app-info'>
-                    <p>OnlineSampler is a complete sampler built with HTML5 only. The amount of features on it will amaze you. Including 6 different drum kits, social media export, quantization, recording...</p>
-                    <p>Check it out: <a href="apps/boxfrenzy/index.html">link</a></p>
-                    </section>
-                    <section id='boxfrenzy-ss' class='app-ss'></section>
-                </section>
-            </section>
-
-        </section>
-
-        <!-- PLACES -->
-        <section id='places-section' class='content-wrapper-initial'>
-            <section class='reading-shade'></section>
-            <span name='close-button' class='close-button'></span>
-            <section class='content-title'>
-                <section class='current-page-icon-wrapper'>
-                    <span id='places-icon' class='current-page-icon'></span>
-                </section>
-                <section id='writable-title' class='title-line-wrapper'>
-                    <h3>Places</h3>
-                    <!-- <section class='sub-line'></section> -->
-                </section>
-            </section>
-            
-            <section class='content-text'>
-                <h4 id='places-subtitle'>Here are some places I've been to:</h4>
-                <div id="map-canvas"></div>
-            </section>
-
-        </section>
-
-        <!-- SHARE -->
-        <section id='share-section' class='content-wrapper-initial'>
-            <section class='reading-shade'></section>
-            <span name='close-button' class='close-button'></span>
-            <section class='content-title'>
-                <section class='current-page-icon-wrapper'>
-                    <span id='share-icon' class='current-page-icon'></span>
-                </section>
-                <section id='writable-title' class='title-line-wrapper'>
-                    <h3>Share</h3>
-                </section>
-            </section>
-            
-            <section class='content-text'>
-                <h4>You can find me here:</h4>
-                <section class='4x4-matrix'>
-                    <section class='share-buttons'>
-                        <section id='twitter' class='social-icon'></section>
-                        <h2>Follow me</h2>
-                    </section>
-                    <section class='share-buttons'>
-                        <section id='linkedin' class='social-icon'></section>
-                        <h2>Let's connect</h2>
-                    </section>
-                    <section class='share-buttons'>
-                        <section id='github' class='social-icon'></section>
-                        <h2>Fork me</h2>
-                    </section>
-                    <section class='share-buttons'>
-                        <section id='facebook' class='social-icon'></section>
-                        <h2>Facebook</h2>
-                    </section>
-                </section>
-            </section>
-
-        </section>
-
-        
-
-    </section>
-
-    <section class='nav-wrapper'>
-        <!-- <section class='welcome-title'>
-            <h1>Who is Guido Fioravantti?</h1>
-        </section> -->
-        <section class='line'></section>
-
-        <section class='nav-buttons'>
-            <section class='button-wrapper'>
-                <section id='work-button' class='button-image'></section>
-                <h2 class='button-title'>Work</h2>
-            </section>
-            <section class='button-wrapper'>
-                <section id='apps-button' class='button-image'></section>
-                <h2 class='button-title'>Apps</h2>
-            </section>
-            <section class='button-wrapper'>
-                <section id='places-button' class='button-image'></section>
-                <h2 class='button-title'>Places</h2>
-            </section>
-            <section class='button-wrapper'>
-                <section id='share-button' class='button-image'></section>
-                <h2 class='button-title'>Share</h2>
-            </section>
-        </section>
-    </section>
 
 </body>
 </html>

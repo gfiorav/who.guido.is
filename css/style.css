@@ -1,0 +1,239 @@
+* { padding: 0px; margin: 0px; }
+
+body {
+	background-color 		: #e6e6e6;
+
+	font-family: "Courier New", Courier, monospace;
+   	font-weight: 300;
+
+   	width 					: 800px;
+
+   	margin 					: 0 auto;
+}
+
+
+/* Terminal */
+
+.wrapper {
+	width 					: 800px;
+
+	margin 					: 0 auto;
+
+	padding-top 			: 40px;
+}
+
+.terminal-wrapper {
+	height 					: 418px;
+	width  					: 700px;
+
+	margin 					: 0 auto;
+
+	box-shadow 				: 0px 40px 80px 5px #4c4c4c;
+
+	border-radius 			: 10px;
+
+}
+
+.terminal-header {
+	background-color 		: #e3e3e3;
+
+	height 					: 25px;
+	width 					: 698px;
+
+	float 					: left;
+
+	border-top-left-radius 	: 10px;
+	border-top-right-radius : 10px;
+	
+	border 					: solid 1px #000000;
+	 	
+}
+
+.terminal-header-buttons {
+	position 				: absolute;
+
+	width 					: 75px;
+	height 					: 13px;
+
+	margin-left 			: 8px;
+	margin-top 				: 6px;
+}
+
+.thb-close, .thb-minimise, .thb-expand {
+	width 					: 11px;
+	height  				: 11px;
+
+	margin-right 			: 8px;
+
+	float 					: left;
+
+	border-radius 			: 100px;
+
+	border 					: solid 1px #7f7f7f;
+}
+
+.thb-close {
+	background-color 		: #f7605c;
+}
+
+.thb-minimise {
+	background-color		: #fabf32; 
+}
+
+.thb-expand {
+	background-color		: #46cc3d;
+}
+
+.terminal-header-label {
+	width 					: 400px;
+	height 					: 18px;
+
+	margin 					: 2px auto;
+}
+
+.thl-text {
+	width 					: 100%;
+
+	font-family 			: "Helvetica", Helvetica;
+
+	font-size 				: 17px;
+	color 					: #666666;
+
+	text-align 				: center;
+}
+
+.terminal {
+	background-color 			: #ffffff;
+
+	height 						: 390px;
+	width 						: 698px;
+
+	float 						: left;
+
+	border-bottom-left-radius 	: 10px;
+	border-bottom-right-radius 	: 10px;
+
+	border 					: solid 1px black;
+
+	border-top 				: none;
+
+}
+
+.terminal-text {
+	margin 					: 5px;
+
+	
+	width 					: 688px;
+	height 					: 380px;
+
+	list-style-type 		: none;
+
+	overflow-y 				: auto;	
+}
+
+.terminal-line {
+	font-size 				: 16px;
+
+	width 					: 588px;
+	height 					: 16px;
+}
+
+/* Panel */
+.panel-background {
+	width 					: 700px;
+	overflow 				: hidden;
+	background-color 		: #e6e6e6;
+
+	margin 					: 0 auto;
+	margin-top 				: 40px;
+
+	border-radius 			: 10px;
+
+}
+
+.panel-wrapper {
+	width 					: 698px;
+
+	margin 					: 0 auto;
+
+	padding 				: 10px 0;
+
+	overflow 				: hidden;
+
+	border-radius 			: 10px;
+
+	background:url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABJJREFUCB1jYGBg+A/ExAHsKgFV7gH/ssPq5wAAAABJRU5ErkJggg==
+	) repeat;
+
+	border 					: solid 1px black;
+}
+
+.panel-buttons-wrapper {
+	width 					: 680px;
+
+	margin 					: 0 auto;
+
+}
+
+.panel-title {
+	width 					: 660px;
+
+	margin 					: 0 auto; 
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 200;	
+
+   	font-size 				: 32px;
+
+   	color 					: #4c4c4c;
+}
+
+.panel-button {
+	width 					: 160px;
+	height 					: 50px;
+
+	float 					: left;
+
+	margin 					: 5px 5px;
+
+	border 					: solid 1px #4c4c4c;
+	border-radius 			: 10px;
+
+	background-color 		: #ffffff;
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 200;	
+
+   	font-size 				: 20px;
+
+   	line-height 			: 100%;
+
+}
+
+.panel-button:hover {
+	cursor 					: pointer;
+}
+
+.panel-button:focus {
+	outline 				: 0px;
+}
+
+footer {
+	width 					: 700px;
+
+	margin 					: 0 auto;
+	margin-top 				: 20px;
+}
+
+h3 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 200;	
+
+	font-size : 12px;	
+
+	text-align 	: center;
+
+	color 		: #bfbfbf;
+}
+
