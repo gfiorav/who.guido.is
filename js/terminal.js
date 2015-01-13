@@ -17,12 +17,11 @@ __OnSamLink 		= 'http://www.onlinesampler.com'
 __WGILink 			= 'http://who.guido.is'
 __PTATLink 			= 'https://play.google.com'
 __CVLink 			= 'rsrc/guido_fioravantti_cv.pdf'
-__ASCIIFullBlock 	= String.fromCharCode(9608)
 __ASCIISpaceBar 	= String.fromCharCode(127)
+__Cursor 			= '<b style="color:#7f7f7f">' +String.fromCharCode(9608)+ '</b>'
 __Prompt 			= 'who.guido.is:~ guest$ '
 __Tab 				= '&nbsp;&nbsp;&nbsp;&nbsp;'
 __LoadingSymbol 	= [ '|', '/', '&mdash;', '|', '/', '&mdash;', '\\']
-
 
 _CursorPID 			= 0
 _LinesOutputed 		= 0
@@ -121,30 +120,24 @@ function registerEventListeners () {
 			isIdle = false
 			window.open(__CVLink, '_blank')
 			isIdle = true
-			// appendText('cv --all | genpdf -o "guido_fioravantti_cv.pdf"', PDFVersionProgram)
 		}
-
-		animateButton(e.target)
 	}
 }
 
-function startCursor (delay) {
+function startCursor () {
 	stopCursor()
 
-	
 	_CursorPID = setInterval(blinkCursor, __BlinkInterval)	
 	
-
-	isOn = true
 }
 
 function blinkCursor () {
 	var text = txtLine.innerHTML
-	if(isOn) {
-		txtLine.innerHTML = text.substr(0, text.length - 1)
+	if(!isOn) {
+		txtLine.innerHTML += __Cursor
 	}
 	else {
-		txtLine.innerHTML += __ASCIIFullBlock
+		txtLine.innerHTML = text.substr(0, text.length -__Cursor.length)
 	}
 
 	isOn = !isOn
@@ -155,7 +148,9 @@ function stopCursor () {
 
 	var text = txtLine.innerHTML
 	if(isOn) {
-		txtLine.innerHTML = text.substr(0, text.length - 1)
+		txtLine.innerHTML = text.substr(0, text.length -__Cursor.length)
+
+		isOn = false
 	}
 }
 
@@ -190,8 +185,6 @@ function format (line) {
 function printLine (line) {
 	line = format(line)
 
-	line += ' '
-
 	var txtTermText = document.getElementById('txtTermText')
 
 	txtLine = document.createElement('li')
@@ -213,8 +206,6 @@ function appendText (line, callback) {
 
 	line = format(line)
 
-	line += ' '
-
 	var delay = 0
 	for (var c = 0; c < line.length -1; c++) {
 		printChar(line.charAt(c), delay, txtLine, false, null)
@@ -222,6 +213,19 @@ function appendText (line, callback) {
 	}
 	printChar(line.charAt(line.length -1), delay, txtLine, true, callback)
 
+}
+
+function printChar (c, delay, txtLine, isLast, callback) {
+	setTimeout(
+		function () {
+			txtLine.innerHTML += c
+
+			if(isLast){
+				setTimeout(callback, __EnterWait)
+				startCursor()	
+			} 
+		}
+		, delay)
 }
 
 function appendLoading (cycles, callback) {
@@ -237,19 +241,6 @@ function appendLoading (cycles, callback) {
 	}
 
 	changeChar(boudary, delay, txtLine, true, callback) 
-}
-
-function printChar (c, delay, txtLine, isLast, callback) {
-	setTimeout(
-		function () {
-			txtLine.innerHTML += c
-
-			if(isLast){
-				setTimeout(callback, __EnterWait)
-				startCursor()	
-			} 
-		}
-		, delay)
 }
 
 function changeChar (index, delay, txtLine, isLast, callback) {
