@@ -5,6 +5,7 @@ __BlinkInterval 	= 800
 __BtnAnimInterval 	= 70
 __LoadingInterval 	= 200
 __LoadingCycles 	= 2
+__LoadingOffset 	= 4000
 __InitialWait 		= 1000
 __EnterWait 		= 300
 __Now				= 0
@@ -97,15 +98,6 @@ function registerEventListeners () {
 		animateButton(e.target)
 	}
 
-	document.getElementById('btnPDFVersion').onclick = function (e) {
-		if(isIdle) {
-			isIdle = false
-			appendText('cv --all | genpdf -o "guido_fioravantti_cv.pdf"', PDFVersionProgram)
-		}
-
-		animateButton(e.target)
-	}
-
 	document.getElementById('btnPortfolio').onclick = function (e) {
 		if(isIdle) {
 			isIdle = false
@@ -119,6 +111,17 @@ function registerEventListeners () {
 		if(isIdle) {
 			isIdle = false
 			appendText('clear', clearScreenProgram)
+		}
+
+		animateButton(e.target)
+	}
+
+	document.getElementById('btnPDFVersion').onclick = function (e) {
+		if(isIdle) {
+			isIdle = false
+			window.open(__CVLink, '_blank')
+			isIdle = true
+			// appendText('cv --all | genpdf -o "guido_fioravantti_cv.pdf"', PDFVersionProgram)
 		}
 
 		animateButton(e.target)
@@ -385,7 +388,6 @@ function PDFVersionProgram () {
 }
 
 function generatePDFSubRoutine () {
-	window.open(__CVLink)
 	printLine(__ASCIISpaceBar)
 	startCursor();
 
