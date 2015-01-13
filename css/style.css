@@ -219,6 +219,12 @@ body {
 	outline 				: 0px;
 }
 
+#btnPDFVersion {
+	background 				: url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACVJREFUCB1j/A8EDFDgftaOgQEkAAJuZ2zBNFgAxgGJMCBzQAIAg10wFo4FyhYAAAAASUVORK5CYII=
+		);
+}
+
 footer {
 	width 					: 700px;
 
