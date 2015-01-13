@@ -4,6 +4,7 @@ __TypeDelayMax 		= 100
 __BlinkInterval 	= 800
 __BtnAnimInterval 	= 70
 __LoadingInterval 	= 200
+__LoadingCycles 	= 2
 __InitialWait 		= 1000
 __EnterWait 		= 300
 __Now				= 0
@@ -14,6 +15,7 @@ __MailToLink 		= 'mailto:guido.fioravantti@gmail.com'
 __OnSamLink 		= 'http://www.onlinesampler.com'
 __WGILink 			= 'http://who.guido.is'
 __PTATLink 			= 'https://play.google.com'
+__CVLink 			= 'rsrc/guido_fioravantti_cv.pdf'
 __ASCIIFullBlock 	= String.fromCharCode(9608)
 __ASCIISpaceBar 	= String.fromCharCode(127)
 __Prompt 			= 'who.guido.is:~ guest$ '
@@ -95,14 +97,14 @@ function registerEventListeners () {
 		animateButton(e.target)
 	}
 
-	// document.getElementById('btnPDFVersion').onclick = function (e) {
-	// 	if(isIdle) {
-	// 		isIdle = false
-	// 		appendText('cv --all | genpdf -o "guido_fioravantti_cv.pdf"', PDFVersionProgram)
-	// 	}
+	document.getElementById('btnPDFVersion').onclick = function (e) {
+		if(isIdle) {
+			isIdle = false
+			appendText('cv --all | genpdf -o "guido_fioravantti_cv.pdf"', PDFVersionProgram)
+		}
 
-	// 	animateButton(e.target)
-	// }
+		animateButton(e.target)
+	}
 
 	document.getElementById('btnPortfolio').onclick = function (e) {
 		if(isIdle) {
@@ -306,7 +308,7 @@ function currenPositionProgram () {
 	printLine('\tPrevious:')
 	printLine('\t\tCompany\tHeartBeat Records Madrid')
 	printLine('\t\tPosition\tSound engineer & producer')
-	printLine('\t\tTime\t\tSep 2010 &mdash; Dec 2011')
+	printLine('\t\tTime\t\tSep 2009 &mdash; Dec 2011')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
@@ -379,11 +381,13 @@ function contactProgram () {
 function PDFVersionProgram () {
 	printLine(__ASCIISpaceBar)
 	printLine('\tGenerating PDF  ')
-	appendLoading(3, generatePDFSubRoutine)
+	appendLoading(__LoadingCycles, generatePDFSubRoutine)
 }
 
 function generatePDFSubRoutine () {
+	window.open(__CVLink)
 	printLine(__ASCIISpaceBar)
+	startCursor();
 
 	prompt()
 }
