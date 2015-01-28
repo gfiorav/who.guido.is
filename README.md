@@ -32,7 +32,9 @@ This site is "cool" but that is not for everyone. I needed a PDF version. But th
 
 **The Solution** was changing the dot color in the background to an inviting yet not disturbing shade of green. I hope it did the trick and scored a balanced result.
 
-That's all! I hope to have inspired someone, somewhere :)
+# That's all, folks!
+
+I hope to have inspired someone somewhere!
 
 ### EOF
 
