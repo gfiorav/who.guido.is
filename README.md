@@ -32,12 +32,9 @@ This site is "cool" but that is not for everyone. I needed a PDF version. But th
 
 **The Solution** was changing the dot color in the background to an inviting yet not disturbing shade of green. I hope it did the trick and scored a balanced result.
 
-###EO Making the "PDF version" button visible without making it ugly
+That's all! I hope to have inspired someone, somewhere :)
 
-This site is "cool" but that is not for everyone. I needed a PDF version. But the button, while being visible enough, could make the user immediately go for it. The idea of this website is to **connect the visitor with the cv**, making them interact to get the document (breaking the "virtual distance").
+### EOF
 
-**The Solution** was changing the dot color in the background to an inviting yet not disturbing shade of green. I hope it did the trick and scored a balanced result.
-
-###EOF
 
 
