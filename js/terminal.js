@@ -15,7 +15,7 @@ __LikedinLink 		= 'https://www.linkedin.com/profile/public-profile-settings?trk=
 __MailToLink 		= 'mailto:guido.fioravantti@gmail.com'
 __OnSamLink 		= 'http://www.onlinesampler.com'
 __WGILink 			= 'http://who.guido.is'
-__PTATLink 			= 'https://play.google.com'
+__PTATLink 			= 'http://github.com/gfiorav/ptat'
 __CVLink 			= 'rsrc/guido_fioravantti_cv.pdf'
 __ASCIISpaceBar 	= String.fromCharCode(127)
 __Cursor 			= '<b style="color:#7f7f7f">' +String.fromCharCode(9608)+ '</b>'
@@ -392,7 +392,7 @@ function portfolioProgram () {
 	printLine('\t\tWho Guido is\t<a href=' + __WGILink + __TargetBlank + '>who.Guido.is</a>')
 	printLine(__ASCIISpaceBar)
 	printLine('\t&bull; Android')
-	printLine('\t\teCOUSIN PTAT\t<a href=' + __PTATLink + __TargetBlank + '>Google Play Store</a>')
+	printLine('\t\tPTAT\t\t\t<a href=' + __PTATLink + __TargetBlank + '>PTAT on Github</a>')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
