@@ -16,7 +16,7 @@ __MailToLink 		= 'mailto:guido.fioravantti@gmail.com'
 __OnSamLink 		= 'http://www.onlinesampler.com'
 __WGILink 			= 'http://who.guido.is'
 __PTATLink 			= 'http://github.com/gfiorav/ptat'
-__CVLink 			= 'rsrc/guido_fioravantti_cv.pdf'
+__CVLink 			= 'rsrc/cvs/guido_fioravantti_cv.pdf'
 __ASCIISpaceBar 	= String.fromCharCode(127)
 __Cursor 			= '<b style="color:#7f7f7f">' +String.fromCharCode(9608)+ '</b>'
 __Prompt 			= 'who.guido.is:~ guest$ '
