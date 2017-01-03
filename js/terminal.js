@@ -394,7 +394,7 @@ function generatePDFSubRoutine () {
 function portfolioProgram () {
 	printLine(__ASCIISpaceBar)
 	printLine('\t&bull; HTML5/CSS3/JS')
-	printLine('\t\tBlack Friday 2016 Widget for ElPais (offline now)')
+	printLine('\t\tBlack Friday 2016 Widget for <a target="_blank" href="http://www.elpais.com">ElPais</a> (offline now)')
 	printLine('\t\tOnlineSampler\t<a href=' + __OnSamLink + __TargetBlank + '>www.OnlineSampler.com</a>')
 	printLine('\t\tWho Guido is\t<a href=' + __WGILink + __TargetBlank + '>who.Guido.is</a>')
 	printLine(__ASCIISpaceBar)
