@@ -294,8 +294,8 @@ function welcomeProgram () {
 function currenPositionProgram () {
 	printLine(__ASCIISpaceBar)
 	printLine('\tCurrent:')
-	printLine('\t\tCompany\tCartoDB')
-	printLine('\t\tPosition\tIntern Developer')
+	printLine('\t\tCompany\tCARTO')
+	printLine('\t\tPosition\tBackend Developer (<a target="_blank" href="https://github.com/CartoDB/cartodb/graphs/contributors">contributions by @gfiorav</a>)')
 	printLine('\t\tTime\t\tSince July 2015')
 	printLine(__ASCIISpaceBar)
 
