@@ -11,7 +11,7 @@ __EnterWait 		= 300
 __Now				= 0
 __TargetBlank 		= ' target="_blank"'
 __TwitterLink 		= 'http://twitter.com/gfioravantti'
-__LikedinLink 		= 'https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile'
+__LikedinLink 		= 'https://www.linkedin.com/in/guido-fioravantti-rassat-425b1966/es'
 __MailToLink 		= 'mailto:guido.fioravantti@gmail.com'
 __OnSamLink 		= 'http://www.onlinesampler.com'
 __WGILink 			= 'http://who.guido.is'
