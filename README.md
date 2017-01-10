@@ -1,6 +1,6 @@
 # Hey, there!
 
-This is the git for my personal website: [who.guido.is](who.guido.is).
+This is the git for my personal website: [who.guido.is](http://who.guido.is).
 
 # Design
 
