@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Prompt = () => (
-  <textarea />
+  <div className="prompt">guido</div>
 );
 
 export default Prompt;
