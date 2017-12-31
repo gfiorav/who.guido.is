@@ -1,7 +1,13 @@
 import React from 'react';
 import './Terminal.css';
 
-const Terminal = () => (<div className="terminal" />);
+import TitleBar from './terminal/TitleBar';
+
+const Terminal = () => (
+  <div className="terminal">
+    <TitleBar />
+  </div>
+);
 
 export default Terminal;
 
