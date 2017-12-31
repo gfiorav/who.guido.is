@@ -1,0 +1,33 @@
+.title-bar {
+  height: 25px;
+  width: 780px;
+  border-radius: 5px 5px 0 0;
+  white-space: nowrap;
+}
+
+.title {
+  height: 22.5px;
+  width: 100px;
+  margin-left: 340px;
+  padding-top: 2.5px;
+  text-align: center;
+  color: #D8DEE9;
+  float: left;
+}
+
+.window-controls {
+  width: 100px;
+  height: 25px;
+  float: right;
+  border-radius: 0 5px 0 0;
+}
+
+.control {
+  height: 12.5px;
+  width: 16.66%;
+  padding: 6.25px 8.33%;
+  float: left;
+  border-radius: 1000px;
+  color: #D8DEE9;
+}
+
