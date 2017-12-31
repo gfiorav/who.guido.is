@@ -1,15 +1,16 @@
 import React from 'react';
 import './Textarea.css';
 
-const TextArea = () => (
+import Prompt from './Prompt';
+import Input from './Input';
+
+const Textarea = () => (
   <div className="wrapper">
     <ul>
-      <li className="line" />
-      <li className="line" />
-      <li className="line" />
+      <li className="line"><Prompt /><Input /></li>
     </ul>
   </div>
 );
 
-export default TextArea;
+export default Textarea;
 
