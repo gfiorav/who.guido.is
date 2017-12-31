@@ -7,7 +7,10 @@ import Input from './Input';
 const Textarea = () => (
   <div className="wrapper">
     <ul>
-      <li className="line"><Prompt /><Input /></li>
+      <li className="line">
+        <Prompt />
+        <Input />
+      </li>
     </ul>
   </div>
 );
