@@ -2,12 +2,12 @@ import React from 'react';
 import './Terminal.css';
 
 import TitleBar from './terminal/TitleBar';
-import TextArea from './terminal/TextArea';
+import Textarea from './terminal/Textarea';
 
 const Terminal = () => (
   <div className="terminal">
     <TitleBar />
-    <TextArea />
+    <Textarea />
   </div>
 );
 
