@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Prompt from './Prompt';
-import Input from './Input';
+import Prompt from './line/Prompt';
+import Input from './line/Input';
 
 const Line = () => (
   <div className="line">
