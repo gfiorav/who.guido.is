@@ -1,0 +1,26 @@
+* {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+/* 7FB185 • D4E3A7 • FFFFFF • F9F6E7 • 53645C  */
+
+body {
+    background-color: #F9F6E7;
+}
+
+h1 {
+    color: #7FB185;
+}
+
+h2 {
+    color: #D4E3A7;
+}
+
+p {
+    color: #53645C;
+}
+
+hr {
+    color: #FFFFFF;
+}
