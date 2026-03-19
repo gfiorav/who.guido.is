@@ -10,14 +10,10 @@ __InitialWait 		= 1000
 __EnterWait 		= 300
 __Now				= 0
 __TargetBlank 		= ' target="_blank"'
-__TwitterLink 		= 'http://twitter.com/gfioravantti'
-__LikedinLink 		= 'https://www.linkedin.com/in/guido-fioravantti-rassat-425b1966/es'
-__MailToLink 		= 'mailto:guido.fioravantti@gmail.com'
-__OnSamLink 		= 'http://www.onlinesampler.com'
-__WGILink 			= 'http://who.guido.is'
-__PTATLink 			= 'http://github.com/gfiorav/ptat'
-__CVLink 			= 'rsrc/cvs/guido_fioravantti_cv.pdf'
-__ASCIISpaceBar 	= String.fromCharCode(127)
+__LinkedInLink 		= 'https://www.linkedin.com/in/guido-fioravantti-425b1966'
+__SaferLayerLink 	= 'https://saferlayer.com'
+__CartoLink 		= 'https://carto.com'
+__ASCIISpaceBar 	= '&nbsp;'
 __Cursor 			= '<b style="color:#7f7f7f">' +String.fromCharCode(9608)+ '</b>'
 __Prompt 			= 'who.guido.is:~ guest$ '
 __Tab 				= '&nbsp;&nbsp;&nbsp;&nbsp;'
@@ -55,16 +51,7 @@ function registerEventListeners () {
 	document.getElementById('btnCurrentPosition').onclick = function (e) {
 		if(isIdle) {
 			isIdle = false
-			appendText('cv --info "jobs"', currenPositionProgram)
-		}
-
-		animateButton(e.target)
-	}
-
-	document.getElementById('btnLanguagesSpoken').onclick = function (e) {
-		if(isIdle) {
-			isIdle = false
-			appendText('langs -c 3', languagesSpokenProgram)
+			appendText('cv --info "jobs"', experienceProgram)
 		}
 
 		animateButton(e.target)
@@ -73,7 +60,7 @@ function registerEventListeners () {
 	document.getElementById('btnAbilities').onclick = function (e) {
 		if(isIdle) {
 			isIdle = false
-			appendText('capabilities --verbose', abilitiesProgram)
+			appendText('whoami --focus', whatIDoProgram)
 		}
 
 		animateButton(e.target)
@@ -97,10 +84,10 @@ function registerEventListeners () {
 		animateButton(e.target)
 	}
 
-	document.getElementById('btnPortfolio').onclick = function (e) {
+	document.getElementById('btnProjects').onclick = function (e) {
 		if(isIdle) {
 			isIdle = false
-			appendText('portfo --format TXT --links=yes', portfolioProgram)
+			appendText('projects --format TXT --links=yes', projectsProgram)
 		}
 
 		animateButton(e.target)
@@ -115,13 +102,6 @@ function registerEventListeners () {
 		animateButton(e.target)
 	}
 
-	document.getElementById('btnPDFVersion').onclick = function (e) {
-		if(isIdle) {
-			isIdle = false
-			window.open(__CVLink, '_blank')
-			isIdle = true
-		}
-	}
 }
 
 function startCursor () {
@@ -283,68 +263,77 @@ function welcomeProgram () {
 	printLine(__ASCIISpaceBar)
 	printLine('\tHello!')
 	printLine(__ASCIISpaceBar)
-	printLine('\t\tI\'m glad you could make it.')
-	printLine('\t\tWelcome to my personal web!')
-	printLine('\t\tClick the buttons in the section below to know more about me.')
+	printLine('\t\tI\'m Guido Fioravantti.')
+	printLine('\t\tI started building things in Madrid, kept going at a')
+	printLine('\t\tstartup that grew from 20 to 120 people, then moved to')
+	printLine('\t\tNew York and built teams and products from scratch at')
+	printLine('\t\tBloomberg. Somewhere along the way, a side project went')
+	printLine('\t\tviral in Spain. Use the commands below to dig in.')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
 }
 
-function currenPositionProgram () {
+function experienceProgram () {
 	printLine(__ASCIISpaceBar)
-	printLine('\tCurrent:')
-	printLine('\t\tCompany\tCARTO')
-	printLine('\t\tPosition\tBackend Developer (<a target="_blank" href="https://github.com/CartoDB/cartodb/graphs/contributors">contributions by @gfiorav</a>)')
-	printLine('\t\tTime\t\tSince July 2015')
-	printLine(__ASCIISpaceBar)
-
-	printLine('\tPrevious:')
-	printLine('\t\tCompany\tIMDEA Networks')
-	printLine('\t\tPosition\tResearch intern')
-	printLine('\t\tTime\t\tDec 2013 &mdash; June 2015')
+	printLine('\tBloomberg, Trading Systems (Jan 2026 &mdash; Present)')
+	printLine('\t\tFour domains: money markets (we run the leading')
+	printLine('\t\torigination platform in the space), mortgages and')
+	printLine('\t\tMBS workflows, commodities (highest volume of the')
+	printLine('\t\tthree), and sell side middle office for allocation')
+	printLine('\t\tand settlement. The mission across all of them:')
+	printLine('\t\tmodernize the tech stack and turn the teams around.')
 	printLine(__ASCIISpaceBar)
 
-	printLine('\t\tCompany\tHeartBeat Records Madrid')
-	printLine('\t\tPosition\tSound engineer & producer')
-	printLine('\t\tTime\t\tSep 2009 &mdash; Dec 2011')
+	printLine('\tBloomberg, Geo Compute (Jun 2022 &mdash; Feb 2026)')
+	printLine('\t\tFounded this team from scratch and built a new business')
+	printLine('\t\tline within Bloomberg from zero. The company had MAP,')
+	printLine('\t\tbut it expected clients to come to the map and do their')
+	printLine('\t\tanalysis there. I flipped that: an API-first product')
+	printLine('\t\tthat finds the geographical footprint of any financial')
+	printLine('\t\tentity. A company, a muni bond, a supply chain.')
+	printLine('\t\tOnce you have the footprint, you overlay alternative')
+	printLine('\t\tdata. Is this storm going to hit Exxon\'s refineries?')
+	printLine('\t\tHow does Aldi\'s demographic reach compare to Target\'s?')
+	printLine('\t\tHas biodiversity shifted near these factories? You can')
+	printLine('\t\tgo back historically and construct scores over time,')
+	printLine('\t\tsomething a point-in-time map can\'t do.')
+	printLine(__ASCIISpaceBar)
+
+	printLine('\tBloomberg, Maps (Jul 2019 &mdash; Jun 2022)')
+	printLine('\t\tReplaced Bloomberg\'s legacy GIS stack with the open-')
+	printLine('\t\tsource tooling I knew from CARTO. Built all the infra')
+	printLine('\t\tfrom scratch: databases, services, our own k8s system')
+	printLine('\t\tbefore the company-wide one existed. Always kept one')
+	printLine('\t\tfoot in the product side, spotting where geo data could')
+	printLine('\t\tsolve real client problems.')
+	printLine(__ASCIISpaceBar)
+
+	printLine('\tCARTO (Jul 2015 &mdash; Feb 2018)')
+	printLine('\t\tJoined when the company was about 20 people, left when')
+	printLine('\t\tit was over 120. Became one of the top contributors to')
+	printLine('\t\tthe platform, mostly backend but across the full stack.')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
 }
 
-function languagesSpokenProgram () {
+function whatIDoProgram () {
 	printLine(__ASCIISpaceBar)
-	printLine('\tGuido Fioravantti can speak:')
-	printLine('\t\t+\tSpanish\tNatively')
-	printLine('\t\t+\tEnglish\tNatively')
-	printLine('\t\t~\tFrench\tA bit (can understand when spoken)')
+	printLine('\t\tMost of my energy goes into people. I take teams that')
+	printLine('\t\tare stuck or just getting started and turn them into')
+	printLine('\t\tgroups that ship well and enjoy the work. I\'ve done')
+	printLine('\t\tit from the inside at Bloomberg more than once.')
 	printLine(__ASCIISpaceBar)
-
-	prompt()
-}
-
-function abilitiesProgram () {
+	printLine('\t\tI pair that with a product instinct: I\'m good at')
+	printLine('\t\tspotting gaps in a market and figuring out what to')
+	printLine('\t\tbuild to fill them. Geo Compute started that way.')
+	printLine('\t\tSo did SaferLayer.')
 	printLine(__ASCIISpaceBar)
-	printLine('Guido Fioravantti\'s abilities are:')
-	printLine(__ASCIISpaceBar)
-	printLine('\t# Programming')
-	printLine('\t\t+\tRAILS\t\t\tExpert')
-	printLine('\t\t+\tC\t\t\t\tAdvanced')
-	printLine('\t\t+\tJava\t\t\tAdvanced')
-	printLine('\t\t+\tAndroid\t\tGood')
-	printLine('\t\t+\tHTML5/CSS3/JS\tGood')
-	printLine('\t\t+\tPython\t\tGood')
-	printLine(__ASCIISpaceBar)
-	printLine('\t# Engineering')
-	printLine('\t\t+\tNetworks\t\tAdvanced')
-	printLine('\t\t+\tComputers\t\tAdvanced')
-	printLine('\t\t+\tResearch\t\t1.5 year experience')
-	printLine(__ASCIISpaceBar)
-	printLine('\t# Music')
-	printLine('\t\t+\tProducer\t\t4 years experience')
-	printLine('\t\t+\tSound engi.\t2 years experience')
-	printLine('\t\t+\tPR\t\t\t1 year experience')
+	printLine('\t\tOn the technical side, I stay hands-on. Distributed')
+	printLine('\t\tsystems, backend engineering, infrastructure, and')
+	printLine('\t\tmore recently applied AI and computer vision. I like')
+	printLine('\t\tknowing how things work all the way down.')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
@@ -353,53 +342,48 @@ function abilitiesProgram () {
 function educationProgram () {
 	printLine(__ASCIISpaceBar)
 	printLine('\tDegree')
-	printLine('\t\tTitle\t\tTelecommunications Engineering')
+	printLine('\t\tTitle\t\tIngenier&iacute;a Telem&aacute;tica')
 	printLine('\t\tWhere\t\tUniversidad Carlos III de Madrid')
-	printLine('\t\tTime\t\tSince Sep 2010')
+	printLine('\t\tTime\t\t2010 &mdash; 2015')
 	printLine(__ASCIISpaceBar)
-
-	printLine('\tFormation')
-	printLine('\t\tTitle\t\tTelef&oacute;nica Talentum')
-	printLine('\t\tWhere\t\tTelef&oacute;nica, Spain')
-	printLine('\t\tTime\t\tDec 2013 &mdash; Dec 2014')
-	printLine(__ASCIISpaceBar)	
 
 	prompt()
 }
 
 function contactProgram () {
 	printLine(__ASCIISpaceBar)
-	printLine('\tContact me at:')
-	printLine('\t\t+\tTwitter\t<a href=' + __TwitterLink + __TargetBlank + '>@GFioravantti</a>')
-	printLine('\t\t+\tLinkedIn\t<a href=' + __LikedinLink + __TargetBlank + '>Guido Fioravantti</a>')
-	printLine('\t\t+\tE-Mail\t<a href=' + __MailToLink + '>guido.fioravantti@gmail.com</a>')
+	printLine('\tFind me on:')
+	printLine('\t\t+\tLinkedIn\t<a href=' + __LinkedInLink + __TargetBlank + '>Guido Fioravantti</a>')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
 }
 
-function PDFVersionProgram () {
+function projectsProgram () {
 	printLine(__ASCIISpaceBar)
-	printLine('\tGenerating PDF  ')
-	appendLoading(__LoadingCycles, generatePDFSubRoutine)
-}
-
-function generatePDFSubRoutine () {
+	printLine('\t+\t<a href=' + __SaferLayerLink + __TargetBlank + '>SaferLayer</a>')
+	printLine('\t\tCo-founded with a long-time partner I met in New York.')
+	printLine('\t\tWhen someone asks for your ID, you use SaferLayer\'s')
+	printLine('\t\tfree offline tool to embed their name into the document')
+	printLine('\t\twith AI-resistant watermarks. The copy is forever tied')
+	printLine('\t\tto whoever requested it, so if it leaks, you know')
+	printLine('\t\texactly where it came from. The product went viral in')
+	printLine('\t\tSpain, and we\'re now building a B2B API so businesses')
+	printLine('\t\tcan integrate the service directly.')
 	printLine(__ASCIISpaceBar)
-	startCursor();
-
-	prompt()
-}
-
-function portfolioProgram () {
+	printLine('\t+\tBloomberg Geo Compute')
+	printLine('\t\tAPI-first geospatial intelligence for financial data.')
+	printLine('\t\tFind the geographical footprint of any entity, overlay')
+	printLine('\t\talternative data (weather, demographics, biodiversity),')
+	printLine('\t\tand run exposure analysis with historical lookback.')
 	printLine(__ASCIISpaceBar)
-	printLine('\t&bull; HTML5/CSS3/JS')
-	printLine('\t\tBlack Friday 2016 Widget for <a target="_blank" href="http://www.elpais.com">ElPais</a> (offline now)')
-	printLine('\t\tOnlineSampler\t<a href=' + __OnSamLink + __TargetBlank + '>www.OnlineSampler.com</a>')
-	printLine('\t\tWho Guido is\t<a href=' + __WGILink + __TargetBlank + '>who.Guido.is</a>')
+	printLine('\t+\tBloomberg Trading Systems')
+	printLine('\t\tExecution and allocation systems for money markets,')
+	printLine('\t\tmortgages, and commodities.')
 	printLine(__ASCIISpaceBar)
-	printLine('\t&bull; Android')
-	printLine('\t\tPTAT\t\t\t<a href=' + __PTATLink + __TargetBlank + '>PTAT on Github</a>')
+	printLine('\t+\t<a href=' + __CartoLink + __TargetBlank + '>CARTO</a>')
+	printLine('\t\tLocation intelligence platform. Was one of the top')
+	printLine('\t\tcontributors during the company\'s high-growth phase.')
 	printLine(__ASCIISpaceBar)
 
 	prompt()
