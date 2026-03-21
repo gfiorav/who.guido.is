@@ -171,9 +171,9 @@ function clearScreen(callback) {
 // Helpers
 
 function printBodyLines(lines) {
-  for (const line of lines) {
-    printLine(`\t\t${line}`);
-  }
+  // Join lines with space for natural wrapping
+  const paragraph = lines.join(' ');
+  printLine(`\t\t${paragraph}`);
 }
 
 function makeLink(linkKey, text) {
