@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.terminal {
+  font-family: "Courier New", monospace;
+  width: 300px;
+  padding: 10px;
+  background: #000;
+  color: #0f0;
+  margin: 20px;
+}
+
+.test1 {
+  white-space: pre;
+}
+
+.test2 {
+  white-space: pre-wrap;
+}
+
+.test3 {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.test4 {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+</style>
+</head>
+<body>
+<div class="terminal test1">
+Line with long text that should wrap but won't because pre prevents it: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<div class="terminal test2">
+Line with long text that will wrap with pre-wrap: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<div class="terminal test3">
+Line with long text and word-break: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<div class="terminal test4">
+Line with long text and overflow-wrap: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</body>
+</html>
