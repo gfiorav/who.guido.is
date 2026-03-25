@@ -5,128 +5,73 @@ const CONTENT = {
     carto: 'https://carto.com'
   },
   welcome: {
-    greeting: 'Hello!',
+    greeting: 'hello,',
     body: [
-      "I'm Guido Fioravantti, and I build teams and",
-      'products. Started at a startup in Madrid, then',
-      'moved to New York and kept going at Bloomberg.'
+      "i'm guido. i build teams and products. i'm based in nyc, with experience across geographies, industries, and markets. my work starts when something is missing or stuck. i get to know the people, clear the blockers, and lead the team to deliver.",
+      '',
+      'tap below to learn more.'
     ]
   },
   experience: [
     {
-      header: 'Bloomberg, Trading Systems (Jan 2026 &mdash; Present)',
+      header: 'bloomberg, trading systems',
+      subheader: 'jan 2026 — present',
       body: [
-        'Four domains: money markets (we run the leading',
-        'origination platform in the space), mortgages and',
-        'MBS workflows, commodities (highest volume of the',
-        'three), and sell side middle office for allocation',
-        'and settlement. The focus is modernizing the tech',
-        'stack and turning the teams around.'
+        'i work across money markets, mortgage workflows, commodities, and sell-side middle office for allocation and settlement. the job is to modernize the stack, improve execution, and get the teams delivering well.'
       ]
     },
     {
-      header: 'Bloomberg, Geo Compute (Jun 2022 &mdash; Feb 2026)',
+      header: 'bloomberg, geo compute',
+      subheader: 'jun 2022 — feb 2026',
       body: [
-        'Founded this team from scratch. Bloomberg had MAP,',
-        'but it expected clients to come to the map and do',
-        'their analysis there, so we built an API-first',
-        'product that finds the geographical footprint of',
-        'any financial entity: a company, a muni bond, a',
-        'supply chain. Once you have the footprint, you',
-        'overlay alternative data. Is this storm going to',
-        "hit Exxon's refineries? How does Aldi's",
-        "demographic reach compare to Target's? Has",
-        'biodiversity shifted near these factories? And you',
-        'can go back historically and construct scores,',
-        "something a point-in-time map can't do."
+        "i started this team from scratch. bloomberg had mapping tools, but not a real platform for geospatial analysis. we built an api-first product that finds the geographical footprint of any financial entity, whether that's a company, a muni bond, or a supply chain. once you have that footprint, you can layer in alternative data and ask better questions. is this storm going to hit exxon's refineries? how does aldi's demographic reach compare with target's? how has biodiversity shifted around these factories over time? the historical view mattered as much as the map."
       ]
     },
     {
-      header: 'Bloomberg, Maps (Jul 2019 &mdash; Jun 2022)',
+      header: 'bloomberg, maps',
+      subheader: 'jul 2019 — jun 2022',
       body: [
-        "Replaced Bloomberg's legacy GIS stack with the",
-        'open-source tooling I knew from CARTO and built',
-        'all the infra from scratch: databases, services,',
-        'our own k8s system before the company-wide one',
-        'existed. Always keeping a beat on the geo business',
-        'and suggesting ways to cover client needs with',
-        'the tech.'
+        "i replaced bloomberg's legacy gis stack with open-source tooling and built the infrastructure from scratch: databases, services, and our own kubernetes-based system before the company-wide platform existed. the work was close to the business and focused on covering real client needs with the right technology."
       ]
     },
     {
-      header: 'CARTO (Jul 2015 &mdash; Feb 2018)',
+      header: 'carto',
+      subheader: 'jul 2015 — feb 2018',
       body: [
-        'Joined when the company was about 20 people, left when',
-        'it was over 120. Became one of the top contributors to',
-        'the platform, mostly backend but across the full stack.'
-      ]
-    }
-  ],
-  whatIDo: {
-    body: [
-      'Most of what I do is help teams reach their full',
-      'potential, figuring out what they need and building',
-      "from there. I've done it multiple times at",
-      'Bloomberg, and the product instinct is always part',
-      'of it: Geo Compute and SaferLayer both started as',
-      'gaps I spotted. I stay hands-on technically too,',
-      'mostly distributed systems, backend, and infra,',
-      'with applied AI and computer vision more recently.'
-    ]
-  },
-  education: [
-    {
-      header: 'Degree',
-      body: [
-        'Title\t\tIngenier&iacute;a Telem&aacute;tica',
-        'Where\t\tUniversidad Carlos III de Madrid',
-        'Time\t\t2010 &mdash; 2015'
+        'i joined when the company was around 20 people and left when it was over 120. i worked mostly on the backend, but across the stack where needed.'
       ]
     }
   ],
   contact: {
-    label: 'Find me on:',
     items: [
-      { platform: 'LinkedIn', linkKey: 'linkedin', text: 'Guido Fioravantti' }
+      { platform: 'linkedin', linkKey: 'linkedin', text: 'reach me on linkedin' }
     ]
   },
   projects: [
     {
-      name: 'SaferLayer',
+      name: 'saferlayer',
       linkKey: 'saferlayer',
       body: [
-        'Co-founded with Carlos Sanchez, a long-time partner',
-        "I met in New York. When someone asks for your ID,",
-        "you use SaferLayer's free offline tool to embed",
-        "their name into the document. AI can't remove the",
-        'watermark. Your copy is forever linked to whoever',
-        'requested it, so if it leaks, you know where it',
-        'came from. Went viral in Spain. Now building a B2B',
-        'API so businesses can integrate directly.'
+        "i co-founded saferlayer with carlos sanchez, a long-time collaborator i met in new york. when someone asks for your id, saferlayer lets you embed their name into the document offline and for free. ai can't remove the watermark. the copy stays tied to whoever requested it, so if it leaks, you know where it came from. we're now building a b2b api so businesses can integrate it directly."
       ]
     },
     {
-      name: 'Bloomberg Geo Compute',
+      name: 'bloomberg geo compute',
       body: [
-        'API-first geospatial intelligence for financial data.',
-        'Find the geographical footprint of any entity, overlay',
-        'alternative data (weather, demographics, biodiversity),',
-        'and run exposure analysis with historical lookback.'
+        'api-first geospatial intelligence for financial data. find the geographical footprint of any entity, layer in alternative data, and run exposure analysis with historical lookback.'
       ]
     },
     {
-      name: 'Bloomberg Trading Systems',
+      name: 'bloomberg trading systems',
       body: [
-        'Execution and allocation systems for money markets,',
-        'mortgages, and commodities.'
+        'execution and allocation systems for money markets, mortgages, and commodities.'
       ]
     },
     {
-      name: 'CARTO',
+      name: 'carto',
       linkKey: 'carto',
       body: [
-        "Open-source geospatial platform. Was one of the top",
-        "contributors during the company's high-growth phase."
+        'open-source geospatial platform.'
       ]
     }
   ]

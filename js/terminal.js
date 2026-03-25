@@ -36,8 +36,6 @@ window.onload = () => {
 function registerEventListeners() {
   const commands = [
     ['btnCurrentPosition', 'cv --info "jobs"', experienceProgram],
-    ['btnAbilities', 'whoami --focus', whatIDoProgram],
-    ['btnEducation', 'cv --info "education"', educationProgram],
     ['btnContact', 'cv --info "contact"', contactProgram],
     ['btnProjects', 'projects --format TXT --links=yes', projectsProgram],
     ['btnClear', 'clear', clearScreenProgram]
@@ -191,7 +189,13 @@ function welcomeProgram() {
   printLine(NBSP);
   printLine(`\t${CONTENT.welcome.greeting}`);
   printLine(NBSP);
-  printBodyLines(CONTENT.welcome.body);
+  for (const line of CONTENT.welcome.body) {
+    if (line === '') {
+      printLine(NBSP);
+    } else {
+      printLine(`\t${line}`);
+    }
+  }
   printLine(NBSP);
   prompt();
 }
@@ -200,24 +204,9 @@ function experienceProgram() {
   printLine(NBSP);
   for (const role of CONTENT.experience) {
     printLine(`\t${role.header}`);
-    printBodyLines(role.body);
+    printLine(`\t${role.subheader}`);
     printLine(NBSP);
-  }
-  prompt();
-}
-
-function whatIDoProgram() {
-  printLine(NBSP);
-  printBodyLines(CONTENT.whatIDo.body);
-  printLine(NBSP);
-  prompt();
-}
-
-function educationProgram() {
-  printLine(NBSP);
-  for (const section of CONTENT.education) {
-    printLine(`\t${section.header}`);
-    printBodyLines(section.body);
+    printBodyLines(role.body);
     printLine(NBSP);
   }
   prompt();
@@ -225,9 +214,8 @@ function educationProgram() {
 
 function contactProgram() {
   printLine(NBSP);
-  printLine(`\t${CONTENT.contact.label}`);
   for (const item of CONTENT.contact.items) {
-    printLine(`\t\t+\t${item.platform}\t${makeLink(item.linkKey, item.text)}`);
+    printLine(`\t${makeLink(item.linkKey, item.text)}`);
   }
   printLine(NBSP);
   prompt();
