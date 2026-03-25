@@ -14,6 +14,72 @@ const CURSOR_HTML = `<b style="color:#7f7f7f">${String.fromCharCode(9608)}</b>`;
 const PROMPT_TEXT = 'who.guido.is:~ guest$ ';
 const TAB = '&nbsp;&nbsp;&nbsp;&nbsp;';
 const LOADING_SYMBOLS = ['|', '/', '&mdash;', '|', '/', '&mdash;', '\\'];
+const CHARS_PER_LINE = 43;
+const BODY_INDENT = 8;
+const WRAP_INDENT = 4;
+const FIRST_LINE_WIDTH = CHARS_PER_LINE - BODY_INDENT;
+const WRAP_LINE_WIDTH = CHARS_PER_LINE - WRAP_INDENT;
+
+// Text Wrapping
+
+function wrapText(text, firstWidth, wrapWidth) {
+  const words = text.split(/\s+/);
+  const lines = [];
+  let current = '';
+  let currentMax = firstWidth;
+
+  for (const word of words) {
+    if (!word) continue;
+    const wordLen = word.length;
+    const currentLen = current.length;
+    const wouldBe = currentLen === 0 ? wordLen : currentLen + 1 + wordLen;
+
+    if (wouldBe > currentMax && currentLen > 0) {
+      lines.push(current);
+      current = word;
+      currentMax = wrapWidth;
+    } else {
+      current += (currentLen === 0 ? '' : ' ') + word;
+    }
+  }
+  if (current.length > 0) {
+    lines.push(current);
+  }
+  return lines;
+}
+
+function extractLinks(text) {
+  const links = [];
+  const linkRegex = /<a[^>]*href="[^"]*"[^>]*>([^<]*)<\/a>/g;
+  let match;
+  let index = 0;
+  let plain = text;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    const visibleText = match[1];
+    const placeholder = `\x00${visibleText}\x01`;
+    links.push({
+      placeholder,
+      fullTag: match[0],
+      text: visibleText
+    });
+    index++;
+  }
+
+  for (const link of links) {
+    plain = plain.replace(link.fullTag, link.placeholder);
+  }
+
+  return { plain, links };
+}
+
+function reinsertLinks(text, links) {
+  let result = text;
+  for (const link of links) {
+    result = result.replace(link.placeholder, link.fullTag);
+  }
+  return result;
+}
 
 // State
 let cursorPID = 0;
@@ -169,9 +235,15 @@ function clearScreen(callback) {
 // Helpers
 
 function printBodyLines(lines) {
-  // Join lines with space for natural wrapping
   const paragraph = lines.join(' ');
-  printLine(`\t\t${paragraph}`);
+  const { plain, links } = extractLinks(paragraph);
+  const wrapped = wrapText(plain, FIRST_LINE_WIDTH, WRAP_LINE_WIDTH);
+  
+  for (let i = 0; i < wrapped.length; i++) {
+    const line = reinsertLinks(wrapped[i], links);
+    const prefix = i === 0 ? '\t\t' : '\t';
+    printLine(`${prefix}${line}`);
+  }
 }
 
 function makeLink(linkKey, text) {
@@ -193,7 +265,7 @@ function welcomeProgram() {
     if (line === '') {
       printLine(NBSP);
     } else {
-      printLine(`\t${line}`);
+      printBodyLines([line]);
     }
   }
   printLine(NBSP);
